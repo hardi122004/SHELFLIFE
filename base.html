@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShelfLife</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <!-- Local Font Awesome -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+<!-- Local Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}">
+
+</head>
+<body>
+    <!-- header section -->
+<header class="header">
+	<a href="#" class="logo"> <i class="fa fa-shopping-basket"></i> ShelfLife</a>
+
+<nav class="navbar">
+	<!-- <a href="#Home">Home</a> -->
+    <a href="{% url 'homepage' %}">Home</a>
+	<a href="#features">Features</a>
+	<a href="#products">Products</a>
+	<a href="{% url 'signup' %}">login/signup</a>
+	<a href="{% url 'grocery_dashboard' %}">Shop</a>
+    <a href="{% url 'view_cart' %}">Cart</a>
+</nav>
+
+<!-- <div class="icons">
+    <div class="fa fa-bars" id="menu-btn"></div>
+    <div class="fa fa-search" id="search-btn"></div>
+    <div class="fa fa-shopping-cart" id="cart-btn"></div>
+    <div class="fa fa-user" id="login-btn"></div>
+</div> -->
+
+<!-- <form action="" class="search-form">
+    <input type="search" id="search-box" placeholder="Search Here">
+    <label for="search-box" class="fa fa-search" ></label>
+</form> -->
+
+<div class="shopping-cart">
+    <div class="box">
+        <i class="fa fa-trash"></i>
+        <img src="{% static 'images/cart-img-1.png' %}" alt="watermelon">
+        <div class="content">
+            <h3>Watermelon</h3>
+            <span class="price">$15/-</span>
+            <span class="quantity">Qty : 1</span>
+        </div>
+    </div>
+    <div class="box">
+        <i class="fa fa-trash"></i>
+        <img src="{%static 'images/cart-img-2.png' %}" alt="onion">
+        <div class="content">
+            <h3>Onion</h3>
+            <span class="price">$3.0/-</span>
+            <span class="quantity">Qty : 2</span>
+        </div>
+    </div>
+    <div class="box">
+        <i class="fa fa-trash"></i>
+        <img src="{% static 'images/cart-img-3.png' %}" alt="chicken">
+        <div class="content">
+            <h3>Chicken</h3>
+            <span class="price">$25.0/-</span>
+            <span class="quantity">Qty : 1</span>
+        </div>
+    </div>
+
+    <div class="total"> Total : $43.0/-</div>
+    <a href="#" class="btn">CHECKOUT</a>
+</div>
+
+
+<!-- login -->
+<form action="#" class="login-form">
+    <h3>Login Now</h3>
+    <input type="tel" placeholder="Enter Your Number" class="box">
+    <input type="password" placeholder="Enter Your Password" class="box" class="btn">
+
+<p>Forget Your Password <a href="#">Click Here</a></p>
+<p>Dont Have An Account <a href="#">Create Now</a></p>   
+</form>
+</header>
+    {% block content %}{% endblock %}
+</body>
+</html>

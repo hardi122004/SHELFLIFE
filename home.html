@@ -1,0 +1,317 @@
+
+{% extends "template/base.html" %}
+{% load static %}
+{% block content %}
+    <!-- banner section  -->
+
+<!-- Paste homepage section from index.html -->
+<section class="home" id="home">
+  <div class="content">
+      <h3>Never waste food again! Stay notified before your groceries expire.</h3>
+      <p>Forgot when your vegetables expires? No worries! Shelf Life keeps an eye on
+          your groceries and alerts you before they go bad. Stay organized, waste
+          less, and shop smarter!</p>
+      <a href="#" class="btn">shop now</a>
+  </div>
+ </section>
+<!-- features section -->
+<section class="features" id="features">
+  <h1 class="heading"> our <span>features</span></h1>
+
+  <div class="box-container">
+      <div class="box">
+          <img src="{% static 'images/feature-img-1.png' %}" alt="feature-img-1">
+          <h3>fresh and organic</h3> <br>
+          <p>From soil to soul — naturally fresh, organically yours.</p>
+          <a href="#" class="btn">read more</a>
+      </div>
+      <div class="box">
+          <img src="{% static 'images/feature-img-2.png' %}" alt="feature-img-1">
+          <h3>Free Delivery</h3><br>
+          <p>No delivery charges, no worries — just pure convenience.</p>
+          <a href="#" class="btn">read more</a>
+      </div>
+      <div class="box">
+          <img src="{% static 'images/feature-img-3.png' %}" alt="feature-img-1">
+          <h3>Easy Payments</h3><br>
+          <p>Smooth, secure, and simple — paying made effortless.</p>
+          <a href="#" class="btn">read more</a>
+      </div>
+  </div>
+</section>
+
+<!-- product section -->
+<section class="products" id="products">
+  <h1 class="heading">our <span>products</span></h1>
+
+  <div class="swiper product-slider">
+
+      <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-1.png' %}" alt="product-1">
+              <h1>Orange</h1>
+              <div class="price">Rs.150/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-2.png' %}" alt="product-1">
+              <h1>Onions</h1>
+              <div class="price">Rs.65/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-3.png' %}" alt="product-1">
+              <h1>Meat</h1>
+              <div class="price">Rs.400/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-4.png' %}" alt="product-1">
+              <h1>Cabbage</h1>
+              <div class="price">Rs.28/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+      </div>
+  </div>
+  <div class="product-slider">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-5.png' %}" alt="product-1">
+              <h1>Potato</h1>
+              <div class="price">Rs.75/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-6.png' %}" alt="product-1">
+              <h1>Avacado</h1>
+              <div class="price">Rs.300/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-7.png' %}" alt="product-1">
+              <h1>Carrots</h1>
+              <div class="price">Rs.200/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+          <div class="swiper-slide box">
+              <img src="{% static 'images/product-8.png' %}" alt="product-1">
+              <h1>lemons</h1>
+              <div class="price">Rs.50/-</div>
+              <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half"></i>
+              </div>
+              <a href="" class="btn">add to cart</a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+<!--our Categories section-->
+
+<section class="categories" id="categories">
+  <h1 class="heading"> product <span>categories</span></h1>
+<div class="box-container">
+
+<div class="box">
+  <img src="{% static 'images/cat-1.png' %}">
+  <h3>Vegetables</h3>
+  <p>Upto 45% Off</p>
+  <a href="#" class="btn">shop now</a>
+</div>
+
+
+<div class="box">
+  <img src="{% static 'images/cat-2.png' %}">
+  <h3>Fresh Fruits</h3>
+  <p>Upto 45% Off</p>
+  <a href="#" class="btn">shop now</a>
+</div>
+
+<div class="box">
+  <img src="{% static 'images/cat-3.png' %}">
+  <h3>Dairy Products</h3>
+  <p>Upto 45% Off</p>
+  <a href="#" class="btn">shop now</a>
+</div>
+
+<div class="box">
+  <img src="{% static 'images/cat-4.png' %}">
+  <h3>Fresh Meat</h3>
+  <p>Upto 45% Off</p>
+  <a href="#" class="btn">shop now</a>
+</div>
+</section>
+
+
+<!--our Categories section-->
+
+
+
+<!--Review section-->
+<section class="review" id="'review">
+  <h1 class="heading"> Customer's <span>Review</span></h1>
+
+  <div class="swiper review-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+<img src="{% static 'images/pic-1.png' %}">
+<p>REVIEW BOX.</p>
+<h3>John Deo</h3> 
+<div class="stars">
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star"></i>
+    <i class="fa fa-star-half"></i>
+</div>
+        </div>
+
+
+        <div class="swiper-slide box">
+            <img src="{% static 'images/pic-2.png' %}">
+            <p>REVIEW BOX.</p>
+            <h3>Deneria Chow</h3> 
+            <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half"></i>
+            </div>
+                    </div>
+
+                    <div class="swiper-slide box">
+                        <img src="{% static 'images/pic-3.png' %}">
+                        <p>REVIEW BOX.</p>
+                        <h3>Ron</h3> 
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                                </div>
+
+                                <div class="swiper-slide box">
+                                    <img src="{% static 'images/pic-4.png' %}">
+                                    <p>REVIEW BOX.</p>
+                                    <h3>Emma Pittsberg</h3> 
+                                    <div class="stars">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-half"></i>
+                                    </div>
+                                    
+                                            </div>
+    </div>
+    </div>
+</section>
+<!--Footer section-->
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>ShelfLife<i class="fa fa-shopping-basket"></i></h3>
+            <p>Feel Free To Follow Us On Our Social Media.</p>
+
+            <div class="share">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <h3>Contact Info </h3>
+            <a href="#" class="links"> <i class="fa fa-phone"></i> +91 9829637844</a>
+            <a href="#" class="links"> <i class="fa fa-phone"></i> +91 9887410004</a>
+            <a href="#" class="links"> <i class="fa fa-envelope"></i> info@example.com</a>
+            <a href="#" class="links"> <i class="fa fa-map-marker"></i> Mumbai, India</a>
+          </div>
+  
+  
+          <div class="box">
+              <h3>Quick Links</h3>
+              <a href="#" class="links"> <i class="fa fa-arrow-right"></i> Home</a>
+              <a href="#features" class="links"> <i class="fa fa-arrow-right"></i> Features</a>
+              <a href="#products" class="links"> <i class="fa fa-arrow-right"></i> Products</a>
+              <a href="#categories" class="links"> <i class="fa fa-arrow-right"></i> Categories</a>
+              <a href="#review" class="links"> <i class="fa fa-arrow-right"></i> Review</a>
+          </div>
+  
+  
+          <div class="box">
+              <h3>Newsletter</h3>
+              <p>Subscribe For Latest Updates</p>
+              <input type="email" placeholder="Your Email" class="email">
+              <input type="submit" value="Subscribe" class="btn">
+              <img src="{% static 'images/payment.png' %}" class="payment-img">
+          </div>
+      </div>
+  
+  
+  <div class="credit"> All Rights Reserved </div>    
+  </section>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script> -->
+{% endblock %}

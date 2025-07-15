@@ -1,0 +1,89 @@
+{% extends "template/base.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+  .cart-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cart-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .box {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .box h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #444;
+  }
+
+  .box p {
+    margin: 5px 0;
+    color: #666;
+  }
+
+  .order-form {
+    margin-top: 40px;
+  }
+
+  .order-form input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+
+  .order-form .btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .order-form .btn:hover {
+    background-color: #218838;
+  }
+</style>
+
+<div class="cart-container">
+  <h2>Your Cart</h2>
+  {% for item in items %}
+    <div class="box">
+      <h4>{{ item.item_name }}</h4>
+      <p>Price: ${{ item.price }}</p>
+    </div>
+  {% empty %}
+    <p>Your cart is currently empty.</p>
+  {% endfor %}
+
+  {% if items %}
+  <form method="POST" action="{% url 'order_placed' %}" class="order-form">
+    {% csrf_token %}
+    <input type="email" name="email" placeholder="Enter Email (optional)">
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+  {% endif %}
+</div>
+
+{% endblock %} update the code to show the total amount bill 

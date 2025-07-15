@@ -1,0 +1,24 @@
+{% extends "template/base.html" %}
+{% load static %}
+{% block content %}
+<div class="order-success-container" style="max-width: 600px; margin: 80px auto; padding: 30px; text-align: center; background-color: #fdfdfd; border-radius: 12px; box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);">
+  
+  <h2 style="color: #2e7d32; font-size: 28px; margin-bottom: 20px;">
+    ✅ Order Placed Successfully!
+  </h2>
+
+  <p style="font-size: 18px; margin-bottom: 10px;">
+    <strong>Total Price:</strong> Rs.{{ total_price }}
+  </p>
+
+  {% if email_sent_to %}
+    <p style="font-size: 16px; color: #555;">
+      📧 Confirmation sent to: <strong>{{ email_sent_to }}</strong>
+    </p>
+  {% endif %}
+
+  <a href="{% url 'grocery_dashboard' %}" class="btn" style="display: inline-block; margin-top: 25px; padding: 10px 20px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
+    Continue Shopping
+  </a>
+</div>
+{% endblock %}

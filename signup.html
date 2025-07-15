@@ -1,0 +1,21 @@
+{% extends "template/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Sign Up Form -->
+<div class="form-container">
+    <form method="POST" class="login-form">
+        {% csrf_token %}
+        <h2 class="form-title">Create Your Account</h2>
+
+        <input type="text" name="uname" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="pwd1" placeholder="Password" required>
+        <input type="password" name="pwd2" placeholder="Confirm Password" required>
+
+        <button type="submit" class="btn">Sign Up</button>
+        <a href="{% url 'user_login' %}">Already Have an Account! LogIn</a>
+    </form>
+</div>
+{% endblock %}

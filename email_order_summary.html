@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <p>Thank you for your order! Here's a summary:</p>
+    
+    {% if user %}
+    <p>Name: {{ user.name }}</p>
+    <p>Phone Number: {{ user.phone_number }}</p>
+    <p>Email: {{ user.email }}</p>
+    {% else %}
+    <p>Thank you for your order!</p>
+    {% endif %}
+
+    <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Expiry Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>{{ item.item_name }}</td>
+                <td>{{ item.category }}</td>
+                <td>{{ item.expiry_date }}</td>
+                <td>{{ item.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p><strong>Total Price:</strong> ${{ total_price }}</p>
+
+    <p>Please consume items before they expire. Thank you!</p>
+</body>
+</html>
